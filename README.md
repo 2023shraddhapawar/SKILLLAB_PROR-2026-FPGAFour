@@ -213,7 +213,8 @@ The system accepts timing/input parameters, processes them using FPGA logic (Fin
 Add an early sketch of the full idea.
 
 **Insert image below:**  
-`[Upload image and link here]`
+`<img width="1536" height="1024" alt="image" src="https://github.com/user-attachments/assets/3a6f8138-db2b-4da8-8eb7-212065ae0103" />
+ here]`
 
 Example:
 
@@ -384,13 +385,17 @@ Explain why you selected your main materials and components.
 
 ## 9.3 Items You chose
 
-| Item                 | Why Needed               | Purchase Link | Latest Safe Date to Procure | Status       |
-| -------------------- | ------------------------ | ------------- | --------------------------- | ------------ |
-| `BO Motors + Wheels` | `Drive system for car`   | `robu.in`     | `15th April`                | `[Received]` |
-| `Buck Converter`     | `Stable power for ESP32` | `local store` | `before testing`            | `[Received]` |
-| `Li-ion Batteries`   | `Portable power`         | `local store` | `before testing`            | `Recieved`   |
+| Item                   | Why Needed               | Purchase Link           | Latest Safe Date to Procure | Status   |
+| ---------------------- | ------------------------ | ----------------------- | --------------------------- | -------- |
+| LEDs Set               | Traffic light indication | Local electronics store | Before assembly             | Received |
+| Breadboard             | Circuit setup            | Local store             | Before testing              | Received |
+| Jumper Wires           | Connections              | Lab kit / store         | Before testing              | Received |
+| Foam Board / Cardboard | Road intersection model  | Local stationery shop   | Before demo                 | Pending  |
+| Extra Push Buttons     | Reset / optional control | Local electronics store | Before testing              | Received |
+
 
 ## 9.4 Budget Summary
+
 
 | Budget Item           | Estimated Cost              |
 | --------------------- | ---------------------------:|
