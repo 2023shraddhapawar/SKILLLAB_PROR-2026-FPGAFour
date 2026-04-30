@@ -196,10 +196,15 @@ Include:
 The system accepts timing/input parameters, processes them using FPGA logic (Finite State Machine), and outputs control signals to LEDs representing traffic lights. The Boolean board acts as the hardware controller, while Vivado is used for simulation, synthesis, and implementation.
 ## 5.3 Input / Output Map
 
-| System Part                              | Type            | What It Does                                                               |
+| System Part             | Type       | What It Does               |
+| ----------------------- | ---------- | -------------------------- |
+| Clock Input             | Input      | Controls timing sequence   |
+| Reset Button            | Input      | Restarts traffic cycle     |
+| Sensor Input (optional) | Input      | Detects traffic density    |
+| FPGA Logic              | Processing | Runs signal algorithm      |
+| LEDs                    | Output     | Shows traffic signal state |
+| Display Module          | Output     | Shows timer/countdown      |
 
-
----
 
 # 6. System Design, Sketches and Visual Planning 
 
@@ -234,12 +239,13 @@ Add a sketch with labels showing:
 
 ## 6.3 Approximate Dimensions
 
-| Dimension        | Value   |
-| ---------------- | ------- |
-| Length           | `16 cm` |
-| Width            | `16 cm` |
-| Height           | `8 cm`  |
-| Estimated weight | `400 g` |
+| Dimension        | Value |
+| ---------------- | ----- |
+| Length           | 16 cm |
+| Width            | 16 cm |
+| Height           | 6 cm  |
+| Estimated weight | 300 g |
+
 
 ---
 
@@ -247,26 +253,22 @@ Add a sketch with labels showing:
 
 ## 7.1 Electronics Used
 
-| Component                 | Quantity | Purpose                               |
-| ------------------------- | --------:| ------------------------------------- |
-| `[Raspi/FPGA]`                 | `1`      | `[Main controller]`                   |
-| `[L298N Motor Driver]`    | `1`      | `[Control Motors]`                    |
-| `[BO Motors]`             | `2`      | `[Rotate wheels]`                     |
-| `[Buck Converter]`        | `1`      | `[Power ESP32]`                       |
-| `[Li Ion Battery Pack]`   | `2`      | `[Power]`                             |
-| `[Projector]`             | `1`      | `[Display obstacles]`                 |
-| `Camera (Webcam / Phone)` | `1`      | `[Tracks car position using markers]` |
+| Component               | Quantity | Purpose                  |
+| ----------------------- | -------- | ------------------------ |
+| FPGA Boolean Board      | 1        | Main controller          |
+| LEDs (Red/Yellow/Green) | 6–12     | Signal indication        |
+| Resistors               | 6–12     | Current limiting         |
+| Push Buttons            | 2        | Reset / pedestrian input |
+| Breadboard              | 1        | Circuit setup            |
+| Jumper Wires            | Multiple | Connections              |
+| Power Supply            | 1        | Board powering           |
 
 ## 7.2 Wiring Plan
 
 Describe the main electrical connections.
 
-**sample Response:**  
-`The RASPI is connected to the motor driver (L298N) using four GPIO pins (18,19; 22,23) to control motor direction (IN1, IN2, IN3, IN4). Two PWM-capable pins (ENA and ENB; 25 and 26) are connected to control the speed of each motor.
-
-The motors are connected to the output terminals of the motor driver. The motor driver is powered directly by the battery pack (higher voltage), while the ESP32 receives regulated 5V from the buck converter.
-
-All components share a common ground to ensure stable operation. The projector and camera are connected to the laptop, which handles tracking and game logic separately.`
+**Response:**  
+`The FPGA Boolean board GPIO pins are connected to Red, Yellow, and Green LEDs through current-limiting resistors. Each traffic lane has a dedicated LED set representing signal states. Push buttons are connected to FPGA input pins for reset and optional manual override. A common ground is maintained throughout the circuit for stable operation. The clock signal is generated internally on FPGA, and all traffic light transitions are controlled through programmed state logic.`
 
 ## 7.3 Circuit Diagram/architecture diagram
 
@@ -279,12 +281,13 @@ Insert a hand-drawn or software-made circuit diagram.
 
 # 7.4. Power Plan
 
-| Question         | Response                                                                                                                                          |
-| ---------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Power source     | `Battery (Li-ion pack)`                                                                                                                           |
-| Voltage required | `~6–8.4V for motors (via driver), stepped down to 5V for ESP32 (buck converter)`                                                                  |
-| Current concerns | `Motors can draw high current under load, which may cause voltage drops affecting ESP32 and WiFi stability`                                       |
-| Safety concerns  | `Avoid over-discharging Li-ion batteries, ensure proper voltage regulation, prevent short circuits, and secure wiring to avoid loose connections` |
+| Question         | Response                             |
+| ---------------- | ------------------------------------ |
+| Power source     | USB / DC Adapter                     |
+| Voltage required | 5V                                   |
+| Current concerns | Low current LED load                 |
+| Safety concerns  | Avoid short circuits and overvoltage |
+
 
 ---
 
@@ -292,12 +295,13 @@ Insert a hand-drawn or software-made circuit diagram.
 
 ## 8.1 Software Tools
 
-| Tool / Platform                | Purpose                                        |
-| ------------------------------ | ---------------------------------------------- |
-| `[MicroPython]`                | `Control ESP32`                                |
-| `[Python/PyGame/OpenCV]`       | `Track markers, game logic, create projection` |
-| `[Fusion/Blender/Illustrator]` | `[Prototyping structure]`                      |
-|                                |                                                |
+| Tool / Platform      | Purpose                  |
+| -------------------- | ------------------------ |
+| Vivado Design Suite  | FPGA coding + simulation |
+| Verilog HDL          | Logic design             |
+| Xilinx Programmer    | Upload bitstream         |
+| Circuit design tools | Diagram creation         |
+
 
 ## 8.2 Software Logic/Algorithm
 
@@ -314,22 +318,22 @@ Include:
 - reset behavior.
 
 **Response:**  
-`
+`The software logic for the Smart Traffic Light Control System is designed using Verilog HDL in Vivado Design Suite and implemented on an FPGA Boolean board. The system uses a Finite State Machine (FSM) to control the sequence of Red, Yellow, and Green lights for two intersecting roads.`
 
-- **Sample Startup behavior:**  
-  The Raspi/FPGA initializes motor pins, PWM control, and starts a WiFi access point with a web server. The laptop initializes camera input, tracking system, and projection mapping.
+- **Startup behavior:**  
+  When powered ON, the FPGA initializes the system in a safe default state, where Road A is Green and Road B is Red, while an internal timer starts counting.
 - **Input handling:**  
-  Movement commands are received from the laptop (pygame sends http requests)
-- **Sensor reading:**  
-  The camera continuously captures frames, and OpenCV detects ArUco markers to determine the car’s position and orientation.
+The system continuously monitors the clock signal and reset button. Optional inputs like pedestrian buttons or traffic sensors can also be added in future versions.
+- **Sensor reading:**
+  Currently, timing is controlled internally, but the design supports future integration of sensors to detect vehicle density and adjust signal timing accordingly.
 - **Decision logic:**  
-  The system maps the car’s position into a virtual coordinate system and checks for nearby obstacles or collisions. If movement is valid, the command is allowed; if not, it is blocked or replaced with a feedback action (like a slight shake).
+  The FSM changes states in a fixed sequence—Green → Yellow → Red—based on timer values, ensuring that both roads never receive Green at the same time.
 - **Output behavior:**  
-  The ESP32 drives the motors using PWM signals to control speed and direction. The projector displays the updated game environment, including obstacles, targets, and feedback visuals.
+  The FPGA sends output signals to LEDs, switching Red, Yellow, and Green lights according to the current state.
 - **Communication logic:**  
-  The laptop sends HTTP requests (e.g., `/forward`, `/left`) to the ESP32 over WiFi. The ESP32 parses these commands and executes motor actions.
+  All processing happens internally on the FPGA using counters, registers, and logic circuits for fast and reliable operation.
 - **Reset behavior:**  
-  If no command is received within a short timeout, the ESP32 stops the motors. The game resets when a level is completed or restarted.`
+  Pressing reset clears the timer and returns the system to its default starting state for a fresh traffic cycle.
 
 ## 8.3 Code Flowchart
 
@@ -357,13 +361,18 @@ Suggested sequence:
 
 ## 9.1 Full BOM
 
-| Item                             | Quantity | In Kit? | Need to Buy? | Estimated Cost | Material / Spec               | Why This Choice?          |
-| -------------------------------- | --------:| ------- | ------------ | --------------:| ----------------------------- | ------------------------- |
-| `[RASPI]`                        | `1`      | `Yes`   | `No`         | `0`            | `38 Pin ESP32`                | `[To control components]` |
-| `[Motor Driver]`                 | `[1]`    | `[Yes]` | `[No]`       | `0`            | `[LN296]`                     | `[To drive both motors]`  |
-| `[DC Motors and wheel]`          | `[2]`    | `[No]`  | `[Yes]`      | `[150]`        | `[BO Motors and 6 cm wheels]` | `[high torque motors]`    |
-| `[Buck Converter]`               | `[1]`    | `[No]`  | `[Yes]`      | `[75]`         |                               |                           |
-| `[Li-ion batteries with holder]` | `[1]`    | `[No]`  | `[Yes]`      | `[200]`        |                               |                           |
+| Item                       | Quantity | In Kit? | Need to Buy? | Estimated Cost | Material / Spec        | Why This Choice?                  |
+| -------------------------- | -------: | ------- | ------------ | -------------: | ---------------------- | --------------------------------- |
+| FPGA Boolean Board         |        1 | Yes     | No           |              0 | FPGA Development Board | Main controller for traffic logic |
+| LEDs (Red, Yellow, Green)  |     6–12 | No      | Yes          |           ₹100 | 5mm LEDs               | To represent traffic signals      |
+| Resistors                  |     6–12 | Yes     | No           |              0 | 220Ω / 330Ω            | Current limiting for LEDs         |
+| Push Buttons               |        2 | Yes     | No           |              0 | Digital input switch   | Reset / manual input              |
+| Breadboard                 |        1 | Yes     | No           |              0 | Standard breadboard    | Easy circuit connections          |
+| Jumper Wires               | Multiple | Yes     | No           |              0 | Male-to-Male wires     | Interconnections                  |
+| Power Supply / USB Cable   |        1 | Yes     | No           |              0 | 5V supply              | Powers FPGA board                 |
+| Display Board / Model Road |        1 | No      | Yes          |           ₹150 | Foam board / cardboard | For project demonstration         |
+
+
 
 ## 9.2 Material Justification
 
