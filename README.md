@@ -82,14 +82,10 @@ By the final review, this README should clearly show:
 
 ## 1.5 Expanded Project Idea
 
-In 1–2 paragraphs, explain:
-
-- what your project is,
-- what kind of experience it creates,
-- what technologies are involved.
-
 **Response:**  
-`A projected and fully customizable time portal can transform engineering education into an immersive PUBG-style battlefield experience from the comfort of home. In this environment, students can learn engineering concepts by entering a virtual battlefield where challenges, obstacles, and missions are designed around real technical problems. Instead of passively studying theory, learners actively apply concepts such as electronics, coding, sensors, robotics, mechanics, and system design to complete missions, solve problems, and progress through different levels. This approach makes engineering education more interactive, engaging, and practical by combining gaming, simulation, and hands-on problem-solving in a familiar and exciting format.`
+`The Smart Traffic Light Control System is a hardware-based traffic management project designed using Vivado software and implemented on an FPGA Boolean board. The system controls traffic lights at an intersection by managing red, yellow, and green signals in a predefined sequence using digital logic circuits. It can be programmed to adjust signal timing, improving traffic flow and reducing waiting time.
+
+This project creates a practical embedded systems experience by combining hardware programming, digital circuit design, and real-time control systems. It demonstrates how FPGA technology can be used in smart city applications for reliable and fast signal processing. The project involves technologies such as Verilog/VHDL coding, FPGA implementation, Vivado Design Suite, Boolean board interfacing, and sequential logic design.`
 
 ---
 
@@ -99,11 +95,12 @@ In 1–2 paragraphs, explain:
 
 List what inspired the project.
 
-| Source Type | Title / Link                                                        | What Inspired You                                                                         |
-| ----------- | ------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- |
-| `[Video]`   | `https://www.instagram.com/reel/DW4CT7WCDry/?igsh=cXg3dzAxYmdncDBo` | `How projection mapping can be used to create interactive digital + physical experiences` |
-|             |                                                                     |                                                                                           |
-|             |                                                                     |                                                                                           |
+| Source Type        | Title / Link                         | What Inspired You                                                                                    |
+| ------------------ | ------------------------------------ | ---------------------------------------------------------------------------------------------------- |
+| Real-world System  | Urban Traffic Signal Control Systems | Inspired the idea of improving traffic management through automation and smart timing control.       |
+| Software Tool      | Vivado Design Suite                  | Inspired the implementation of digital logic design and FPGA programming for real-time applications. |
+| Hardware Platform  | FPGA Boolean Board                   | Inspired the use of reconfigurable hardware for efficient traffic signal control.                    |
+| Technology Concept | Digital Logic Design                 | Inspired the finite state machine and sequential logic approach used in traffic light sequencing.    |
 
 ## 2.2 Original Twist
 
@@ -111,8 +108,7 @@ What makes your project original?
 
 **Response:**  
 
-
----
+Unlike traditional timer-based traffic light systems, our project uses an FPGA-based programmable controller designed in Vivado Design Suite on a Boolean board, which offers high-speed parallel processing, reliability, and real-time control. The system is modular and can be expanded with vehicle density sensors, pedestrian crossing buttons, emergency vehicle priority, and adaptive signal timing. This makes it closer to a smart city traffic solution rather than a basic digital electronics project.---
 
 # 3. Project Intent
 
@@ -120,7 +116,11 @@ What makes your project original?
 
 Describe exactly how a user will use the project.Make it a story
 **Response:**  
+Imagine a busy road intersection during peak hours. Normally, vehicles wait unnecessarily because traffic lights follow fixed timing regardless of road congestion. With our Smart Traffic Light Control System, the FPGA board continuously runs programmed traffic sequences with precise timing and fast switching control.
 
+When the system starts, lights begin in a safe default state—Red ON for one road, Green ON for the other. After the programmed interval, signals change smoothly through Yellow to Red/Green transitions. If future sensors are added, the FPGA can quickly adjust timing based on traffic density.
+
+For the user (operator/demo viewer), the experience is simple: power ON the Boolean board, observe the synchronized LED traffic signals, and monitor how digital logic controls real-world traffic behavior efficiently, accurately, and safely.
                                                   |
 
 
@@ -131,7 +131,7 @@ Describe exactly how a user will use the project.Make it a story
 
 ## 4.1 Definition of “Usable”
 
-
+The project is usable when the FPGA successfully controls Red, Yellow, and Green LEDs in proper sequence with correct timing and no signal conflict.
 
 ## 4.2 Minimum Usable Version
 
@@ -139,11 +139,16 @@ What is the smallest version of this project that still delivers the core experi
 
 **Response:**  
 
-
-## 4.3 Stretch Features
+A basic 2-road traffic signal controller where one road gets Green while the other remains Red, followed by Yellow transition, then the sequence switches.## 4.3 Stretch Features
 
 What features are nice to have but not essential?
 
+Vehicle density sensing
+Pedestrian crossing button
+Emergency vehicle override
+Night mode flashing signal
+Countdown timer display using 7-segment display
+IoT monitoring dashboard
 
 ---
 
@@ -151,17 +156,15 @@ What features are nice to have but not essential?
 
 ## 5.1 Project Type
 
-Check all that apply.
-
 - [x] Electronics-based
 
 - [ ] Mechanical
 
 - [x] Sensor-based
 
-- [x] App-connected
+- [ ] App-connected
 
-- [x] Motorized
+- [ ] Motorized
 
 - [ ] Sound-based
 
@@ -171,7 +174,7 @@ Check all that apply.
 
 - [x] Fabricated structure
 
-- [x] Game logic based
+- [ ] Game logic based
 
 - [x] Installation
 
@@ -190,7 +193,7 @@ Include:
 - app interaction if any.
 
 **Response:**  
-
+The system accepts timing/input parameters, processes them using FPGA logic (Finite State Machine), and outputs control signals to LEDs representing traffic lights. The Boolean board acts as the hardware controller, while Vivado is used for simulation, synthesis, and implementation.
 ## 5.3 Input / Output Map
 
 | System Part                              | Type            | What It Does                                                               |
