@@ -213,8 +213,8 @@ The system accepts timing/input parameters, processes them using FPGA logic (Fin
 Add an early sketch of the full idea.
 
 **Insert image below:**  
-`<img width="1536" height="1024" alt="image" src="https://github.com/user-attachments/assets/3bbee06f-ae35-4930-a1e7-e3212bab0656" />README.md:
 `
+`<img width="1536" height="1024" alt="rough" src="https://github.com/user-attachments/assets/42af5c90-457c-430f-83bc-d7ecf40aa5d6" />
 
 Example:
 
