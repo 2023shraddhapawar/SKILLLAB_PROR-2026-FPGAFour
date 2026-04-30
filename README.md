@@ -63,10 +63,12 @@ By the final review, this README should clearly show:
 
 | Name                  | Primary Role                    | Secondary Role   | Strengths Brought to the Project |
 | --------------        | ------------------------------- | --------------   | -------------------------------- |
-| `Mrugendra Vasmatkar` | `[Electronics / Coding / App ]` | `Documentation`  | `Documentation, Gift of Gab `|
-| `Jyoti Bagate`        | `[Electronics / Fabrication]`   | `[Coding]`       | `Material Handling, Hardware`    |
+| `Shraddha Pawar` | `[Electronics / Coding / App ]` | `Documentation`  | `Documentation, Gift of Gab `|
+| `Shubham Surve` | `[Electronics / Coding / App ]` | `Documentation`  | `Documentation, Gift of Gab `|
+| `Soham Baing` | `[Electronics / Coding / App ]` | `Documentation`  | `Documentation, Gift of Gab `|
+| `Gauransh Dubey` | `[Electronics / Coding / App ]` | `Documentation`  | `Documentation, Gift of Gab `|
 
-## 1.3 Project Title
+## 1.3 FPGAFour
 
 `"Project Project"`
 
@@ -76,7 +78,7 @@ By the final review, this README should clearly show:
 
 ## 1.4 One-Line Pitch
 
-`A projected, fully customizable time portal where engineering education is done through PUBG battlefield in the comfort of our home`
+`A programmable FPGA-based smart traffic light system that efficiently controls road traffic using real-time signal timing and digital logic implementation on a Boolean board.`
 
 ## 1.5 Expanded Project Idea
 
