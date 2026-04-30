@@ -216,12 +216,6 @@ Add an early sketch of the full idea.
 `
 `<img width="1536" height="1024" alt="rough" src="https://github.com/user-attachments/assets/42af5c90-457c-430f-83bc-d7ecf40aa5d6" />
 
-Example:
-
-```md
-
-```
-
 
 
 ## 6.2 Labeled Build Sketch/architecture/flow diagram/algorithm
@@ -257,11 +251,8 @@ Add a sketch with labels showing:
 | Component               | Quantity | Purpose                  |
 | ----------------------- | -------- | ------------------------ |
 | FPGA Boolean Board      | 1        | Main controller          |
-| LEDs (Red/Yellow/Green) | 6–12     | Signal indication        |
-| Resistors               | 6–12     | Current limiting         |
-| Push Buttons            | 2        | Reset / pedestrian input |
-| Breadboard              | 1        | Circuit setup            |
-| Jumper Wires            | Multiple | Connections              |
+| LEDs |   16    | Signal indication        |
+| Push Buttons            | 4        | Reset / pedestrian input |
 | Power Supply            | 1        | Board powering           |
 
 ## 7.2 Wiring Plan
@@ -366,11 +357,8 @@ Suggested sequence:
 | -------------------------- | -------: | ------- | ------------ | -------------: | ---------------------- | --------------------------------- |
 | FPGA Boolean Board         |        1 | Yes     | No           |              0 | FPGA Development Board | Main controller for traffic logic |
 | LEDs (Red, Yellow, Green)  |     6–12 | No      | Yes          |           ₹100 | 5mm LEDs               | To represent traffic signals      |
-| Resistors                  |     6–12 | Yes     | No           |              0 | 220Ω / 330Ω            | Current limiting for LEDs         |
 | Push Buttons               |        2 | Yes     | No           |              0 | Digital input switch   | Reset / manual input              |
-| Breadboard                 |        1 | Yes     | No           |              0 | Standard breadboard    | Easy circuit connections          |
-| Jumper Wires               | Multiple | Yes     | No           |              0 | Male-to-Male wires     | Interconnections                  |
-| Power Supply / USB Cable   |        1 | Yes     | No           |              0 | 5V supply              | Powers FPGA board                 |
+| Power Supply   |        1 | Yes     | No           |              0 | 5V supply              | Powers FPGA board                 |
 | Display Board / Model Road |        1 | No      | Yes          |           ₹150 | Foam board / cardboard | For project demonstration         |
 
 
@@ -388,10 +376,7 @@ Explain why you selected your main materials and components.
 | Item                   | Why Needed               | Purchase Link           | Latest Safe Date to Procure | Status   |
 | ---------------------- | ------------------------ | ----------------------- | --------------------------- | -------- |
 | LEDs Set               | Traffic light indication | Local electronics store | Before assembly             | Received |
-| Breadboard             | Circuit setup            | Local store             | Before testing              | Received |
-| Jumper Wires           | Connections              | Lab kit / store         | Before testing              | Received |
-| Foam Board / Cardboard | Road intersection model  | Local stationery shop   | Before demo                 | Pending  |
-| Extra Push Buttons     | Reset / optional control | Local electronics store | Before testing              | Received |
+| FPGA                   | Implementation           | 401 Lab                 | Before assembly             | Received |
 
 
 ## 9.4 Budget Summary
