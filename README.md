@@ -10,52 +10,9 @@
 
 ---
 
-# Before you begin
-
-## Fork and rename this repository
-
-After forking this repository, rename it using the format:
-
-`SKILLLAB_PROR-2026-TeamName`
-
-### Example
-
-`SKILLLAB_PROR-2026-AuroWizards`
-
-Do not keep the default repository name.
-
----
-
-# How to use this README
-
-This file is your team’s **working project document**.
-
-You must keep updating it throughout the build period.  
-By the final review, this README should clearly show:
-
-- your idea,
-- your planning,
-- your design decisions,
-- your technical process,
-- your build progress,
-- your testing,
-- your failures and changes,
-- your final outcome.
-
-## Rules
-
-- Fill every section.
-- Do not delete headings.
-- If something does not apply, write `Not applicable` and explain why.
-- Add images, screenshots, sketches, links, and videos wherever useful.
-- Update task status and weekly logs regularly.
-- Use this file as evidence of process, not only as a final report.
-
----
-
 # 1. Team Identity
 
-## 1.1 Studio / Group Name
+## 1.1 FPGAFour
 
 `Project^2`
 
@@ -63,10 +20,10 @@ By the final review, this README should clearly show:
 
 | Name                  | Primary Role                    | Secondary Role   | Strengths Brought to the Project |
 | --------------        | ------------------------------- | --------------   | -------------------------------- |
-| `Shraddha Pawar` | `[Electronics / Coding / App ]` | `Documentation`  | `Documentation, Gift of Gab `|
-| `Shubham Surve` | `[Electronics / Coding / App ]` | `Documentation`  | `Documentation, Gift of Gab `|
-| `Soham Baing` | `[Electronics / Coding / App ]` | `Documentation`  | `Documentation, Gift of Gab `|
-| `Gauransh Dubey` | `[Electronics / Coding / App ]` | `Documentation`  | `Documentation, Gift of Gab `|
+| `Shraddha Pawar` | `[Documentation ]` | `Implementation of FPGA`  | `Documentation, Gift of Gab `|
+| `Shubham Surve` | `[Electronics  ]` | `Coding`  | `Documentation, Gift of Gab `|
+| `Soham Baing` | ` Coding ]` | `Implenetation of FPGA`  | `Documentation, Gift of Gab `|
+| `Gauransh Dubey` | `[ Coding ]` | `Hardware`  | `Documentation, Gift of Gab `|
 
 ## 1.3 FPGAFour
 
@@ -139,7 +96,7 @@ What is the smallest version of this project that still delivers the core experi
 
 **Response:**  
 
-A basic 2-road traffic signal controller where one road gets Green while the other remains Red, followed by Yellow transition, then the sequence switches.## 4.3 Stretch Features
+A basic 2-road traffic signal controller where one road gets Green while the other remains Red, followed by Yellow transition, then the sequence switches.
 
 What features are nice to have but not essential?
 
@@ -229,8 +186,12 @@ Add a sketch with labels showing:
 - output elements.
 
 **Insert image below:**  
-`[Upload image and link here]`
-<img width="1600" height="1200" alt="image" src="https://github.com/user-attachments/assets/95637f31-b4e7-4427-a9e1-4b63fbeb0ac5" />
+
+<img width="1536" height="1024" alt="cktdiagg" src="https://github.com/user-attachments/assets/d2991fa9-74a2-4edf-b163-a40b2870daae" />
+
+
+
+<img width="4160" height="3120" alt="setup" src="https://github.com/user-attachments/assets/52813a59-efff-4001-96ab-c54073be4517" />
 
 ## 6.3 Approximate Dimensions
 
@@ -260,16 +221,15 @@ Add a sketch with labels showing:
 Describe the main electrical connections.
 
 **Response:**  
-`The FPGA Boolean board GPIO pins are connected to Red, Yellow, and Green LEDs through current-limiting resistors. Each traffic lane has a dedicated LED set representing signal states. Push buttons are connected to FPGA input pins for reset and optional manual override. A common ground is maintained throughout the circuit for stable operation. The clock signal is generated internally on FPGA, and all traffic light transitions are controlled through programmed state logic.`
+`The FPGA Boolean board GPIO pins are connected to LEDs. Push buttons are connected to FPGA input pins for reset and optional manual override. A common ground is maintained throughout the circuit for stable operation. The clock signal is generated internally on FPGA, and all traffic light transitions are controlled through programmed state logic.`
 
 ## 7.3 Circuit Diagram/architecture diagram
 
 Insert a hand-drawn or software-made circuit diagram.
 
 **Insert image below:**  
-`[Upload image and link here]`
-<img width="867" height="1156" alt="" src="" />
 
+<img width="1536" height="1024" alt="circuitdiag" src="https://github.com/user-attachments/assets/06d6ccf0-db16-42cb-a00c-c549c28ab439" />
 
 # 7.4. Power Plan
 
@@ -343,10 +303,8 @@ Suggested sequence:
 - error handling.
 
 **Insert image below:**  
-<img width="1600" height="1200" alt="image" src="" />
-<img width="1600" height="1200" alt="image" src="" />
 
-
+<img width="1149" height="1369" alt="flowchart" src="https://github.com/user-attachments/assets/72d536fe-a237-4c80-b7aa-9b73f161226f" />
 
 
 # 9. Bill of Materials
@@ -356,10 +314,10 @@ Suggested sequence:
 | Item                       | Quantity | In Kit? | Need to Buy? | Estimated Cost | Material / Spec        | Why This Choice?                  |
 | -------------------------- | -------: | ------- | ------------ | -------------: | ---------------------- | --------------------------------- |
 | FPGA Boolean Board         |        1 | Yes     | No           |              0 | FPGA Development Board | Main controller for traffic logic |
-| LEDs (Red, Yellow, Green)  |     6–12 | No      | Yes          |           ₹100 | 5mm LEDs               | To represent traffic signals      |
-| Push Buttons               |        2 | Yes     | No           |              0 | Digital input switch   | Reset / manual input              |
+| LEDs   |     16 | No      | Yes          |           ₹100 | 5mm LEDs               | To represent traffic signals      |
+| Push Buttons               |        4 | Yes     | No           |              0 | Digital input switch   | Reset / manual input              |
 | Power Supply   |        1 | Yes     | No           |              0 | 5V supply              | Powers FPGA board                 |
-| Display Board / Model Road |        1 | No      | Yes          |           ₹150 | Foam board / cardboard | For project demonstration         |
+| Display Board  |        1 | No      | Yes          |           ₹150 |  | For project demonstration         |
 
 
 
@@ -381,15 +339,14 @@ Explain why you selected your main materials and components.
 
 ## 9.4 Budget Summary
 
+| Budget Item     | Estimated Cost |
+| --------------- | -------------- |
+| Electronics     | ₹100           |
+| Fabrication     | ₹100           |
+| Extra materials | ₹100           |
+| Contingency     | ₹200           |
+| **Total**       | **₹500**       |
 
-| Budget Item           | Estimated Cost              |
-| --------------------- | ---------------------------:|
-| Electronics           | `[400]`                     |
-| Mechanical parts      | `[200]`                     |
-| Fabrication materials | `[0 (Available on campus)]` |
-| Purchased extras      | `[0]`                       |
-| Contingency           | `[300]`                     |
-| **Total**             | `[900]`                     |
 
 ## 9.5 Budget Reflection
 
@@ -397,7 +354,7 @@ If your cost is too high, what can be simplified, removed, substituted, or share
 
 **Response:**  
 
----
+The project cost is low because the FPGA board and most components are available in the lab. Additional expenses are limited to LEDs and display materials.
 
 # 10. Planning the Work
 
@@ -415,24 +372,28 @@ Include:
 
 **Response:**  
 
+Task division: coding, circuit setup, testing, and documentation are divided equally among team members.
 
 ## 10.2 Task Breakdown
 
-| Task ID | Task                    | Owner    | Estimated Hours | Deadline     | Dependency | Status |
-| ------- | ----------------------- | -------- | ---------------:| ------------ | ---------- | ------ |
-| T1      | `[Finalize concept]`    | `[Both]` | `2`             | `1st April`  | `None`     | `Done` |
-
+| Task ID | Task                                                   | Owner | Estimated Hours | Deadline   | Dependency | Status      |
+| ------- | ------------------------------------------------------ | ----- | --------------: | ---------- | ---------- | ----------- |
+| T1      | Finalize project concept and design                    | Team  |               2 | 30st April  | None       | Done        |
+| T2      | Create circuit setup on Boolean Board                  | Team  |               3 | 30th April  | T1         | Done        |
+| T3      | Write and simulate Verilog code in Vivado Design Suite | Team  |               5 | 30th April | T2         | Done        |
+| T4      | Implement on FPGA and test LEDs                        |  |               3 | 30th April | T3         | Done        |
+| T5      | Final testing and documentation                        | Team  |               4 | 1th May | T4         | Done |
 
 ## 10.3 Responsibility Split
 
 | Area                 | Main Owner     | Support Owner |
 | -------------------- | ----------     | ------------- |
-| Concept              | `[Mrugendra]`  | `[Jyoti]`     |
-| Electronics          | `[]`           | `[]`          |
-| Coding               | `[]`           | `[]`          |
-| Mechanical build     | `[]`           | `[]`          |
-| Testing              | `[]`           | `[]`          |
-| Documentation        | `[]`           | `[]`          |
+| Concept              | `[Team]`  | `[Team]`     |
+| Electronics          | `[Shubham]`           | `[Soham]`          |
+| Coding               | `[Soham]`           | `[Gauransh]`          |
+| Mechanical build     | `[Gauransh]`           | `[Shraddha]`          |
+| Testing              | `[Shubham]`           | `[Shraddha]`          |
+| Documentation        | `[Shraddha]`           | `[-]`          |
 
 ---
 
@@ -483,23 +444,22 @@ Expected outcomes:
 - [x] Final build ready
 
 ## 12.2  Update Log
+| Days  | Planned Goal                                                             | What Actually Happened                                                                                                                                                                             | What Changed                                                                                               | Next Steps                                         |
+| ----- | ------------------------------------------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | -------------------------------------------------- |
+| Day 1 | Complete project design, coding, simulation, hardware setup, and testing | The traffic light logic was designed in Vivado Design Suite, simulated successfully, uploaded to the FPGA Boolean Board, and tested using onboard LEDs. The core project was completed in one day. | Used normal onboard LEDs instead of separate Red, Yellow, and Green LEDs, which simplified implementation. | Start documentation and collect screenshots/photos |
+| Day 2 | Complete documentation, screenshots, and final report preparation        | Circuit diagrams, flowcharts, simulation screenshots, testing details, reflections, and final report formatting were completed. All project images and records were organized for submission.      | Minor edits were made to improve clarity and presentation quality.                                         | Final submission                                   |
 
-| Days   | Planned Goal   | What Actually Happened | What Changed   | Next Steps     |
-| ------ | -------------- | ---------------------- | -------------- | -------------- |
-| Day 1 | `[Write here]` | `[Write here]`         | `[Write here]` | `[Write here]` |
-| Day 2 | `[Write here]` | `[Write here]`         | `[Write here]` | `[Write here]` |
-| Day 3 | `[Write here]` | `[Write here]`         | `[Write here]` | `[Write here]` |
-| Day 4 | `[Write here]` | `[Write here]`         | `[Write here]` | `[Write here]` |
-
----
 
 # 13. Risks and Unknowns
 
 ## 13.1 Risk Register
 
-| Risk                                                            | Type         | Likelihood | Impact   | Mitigation Plan                                                                       | Owner                |
-| --------------------------------------------------------------- | ------------ | ---------- | -------- | ------------------------------------------------------------------------------------- | -------------------- |
-| WiFi connection between laptop and ESP32 becomes unstable       | `Technical`  | `Medium`   | `High`   | Keep ESP32 close, ensure stable power supply, reduce network load, add fail-safe stop | `[Gopal]`           |
+| Risk                          | Type      | Likelihood | Impact | Mitigation Plan                                       | Owner |
+| ----------------------------- | --------- | ---------- | ------ | ----------------------------------------------------- | ----- |
+| Incorrect FPGA pin assignment | Technical | Medium     | High   | Verify constraints file and pin mapping before upload | Team  |
+| Timing sequence mismatch      | Technical | Medium     | Medium | Test simulation in Vivado before implementation       | Team  |
+| LED output not working        | Hardware  | Low        | Medium | Check wiring and FPGA output pins                     | Team  |
+| Reset button malfunction      | Technical | Low        | Low    | Add proper debounce / verify input logic              | Team  |
 
 
 ## 13.2 Biggest Unknown Right Now
@@ -508,30 +468,36 @@ What is the single biggest uncertainty in your project at this stage?
 
 **Response:**  
 
+The biggest uncertainty is how efficiently the system can be expanded in the future to include traffic sensors and adaptive signal timing while maintaining simple FPGA logic.
 
----
 
 # 14. Testing 
 
 ## 14.1 Technical Testing Plan
 
-| What Needs Testing     | How You Will Test It                                                                 | Success Condition                                                                                    |
-| ---------------------- | ------------------------------------------------------------------------------------ | ---------------------------------------------------------------------------------------------------- |
-| `[Wifi connection]`    | `[Check if motor spins via app button]`                                              | `[Both motors accurately respond to wifi signals]`                                                   |
-                       |
+| What Needs Testing | How You Will Test It            | Success Condition                    |
+| ------------------ | ------------------------------- | ------------------------------------ |
+| LED sequence       | Observe output LEDs on board    | LEDs change in correct traffic order |
+| Timing delay       | Count signal switching interval | Delay remains consistent             |
+| Reset button       | Press reset during operation    | System returns to default state      |
+| FPGA programming   | Upload code and run             | Board executes design successfully   |
+
+
 ## 14.2 Testing and Debugging Log
 
-| Date          | Problem Found                         | Type         | What You Tried                                | Result               | Next Action                                    |
-| ------------- | ------------------------------------- | ------------ | --------------------------------------------- | -------------------- | ---------------------------------------------- |
-| `18th April`  | `Car not balancing properly`          | `Mechanical` | `Add low-friction caster support to one side` | `Worked`             | `improve caster structure`                     |
+| Date       | Problem Found                         | Type      | What You Tried                              | Result | Next Action      |
+| ---------- | ------------------------------------- | --------- | ------------------------------------------- | ------ | ---------------- |
+| 30th April | LEDs not blinking in correct sequence | Technical | Checked FSM state transitions in simulation | Worked | Test on hardware |
+| 30th April | Wrong output pin mapping              | Hardware  | Updated constraints file                    | Worked | Re-test board    |
+| 30th April | Reset not restarting properly         | Technical | Modified reset logic in Verilog             | Worked | Final testing    |
 
 
 ## 14.3 Playtesting Notes
 
-| Tester      | What They Did                        | What Confused Them                    | What They Enjoyed                         | What You Will Change                          |
-| ----------- | ------------------------------------ | ------------------------------------- | ----------------------------------------- | --------------------------------------------- |
-| `Gopal` | `Tried navigating through obstacles` | `Some obstacles ewren't clear enough` | `Liked projection + real car interaction` | `Add a slight red highlight around obstacles` |
-
+| Tester       | What They Did                 | What Confused Them            | What They Enjoyed               | What You Will Change           |
+| ------------ | ----------------------------- | ----------------------------- | ------------------------------- | ------------------------------ |
+| Team Members | Observed LED traffic sequence | Timing was too fast initially | Liked real-time hardware output | Increase visible delay         |
+| Faculty Demo | Tested reset and output cycle | None                          | Clear traffic simulation        | Add optional countdown display |
 
 ---
 
@@ -552,38 +518,21 @@ Include:
 - revisions.
 
 **Response:**  
-`The fabrication process involved designing, manufacturing, assembling, and refining both the physical structure and electronic integration of the system.`
 
-`Design (CAD Modeling):
-The initial model was created using CAD software, where components were designed based on the actual dimensions of the electronic parts. This ensured accurate fitting and minimized errors during assembly.
-Cutting (Laser Cutting):
-The designed parts were fabricated using laser cutting techniques. Sheets were cut precisely according to the CAD model to create the structural base and mounts for components.`
+`The project was built mainly through electronic assembly and FPGA programming rather than mechanical fabrication. The traffic controller logic was designed in Vivado Design Suite using Verilog HDL and simulated before hardware implementation.
 
-`Components were fixed using adhesives and mechanical supports. Certain parts were intentionally kept modular (not permanently fixed) to allow easy replacement and modification of electronics.
-Surface Finishing:
-Some parts were sanded to smooth rough edges after cutting. Sawdust mixed with adhesive was used to fill gaps and uneven edges, improving structural finish. The final structure was then painted for better aesthetics and durability.`
+The FPGA Boolean Board was connected to LEDs through basic circuit wiring. Normal onboard LEDs were used to represent traffic signals. The output pins were mapped correctly using the constraints file, and testing was done by observing LED switching patterns.
 
-`Environment Setup (Dark Room Fabrication):
-To enhance projection visibility, a controlled dark environment was created using Z-boards, paper sheets, and bedsheets. This minimized external light interference and improved projection clarity.
-Revisions and Iterations:
-Multiple adjustments were made throughout the process, including refining alignment, improving structural stability, repositioning components, and optimizing the interaction between the physical car and projected environment.`
+Several revisions were made in timing values, output mapping, and reset behavior to ensure smooth and correct operation of the traffic light sequence.`
+
 
 ## 16 Build Photos
 
-Add photos throughout the project.
 
-Suggested images:
-
-- early sketch,
-- prototype,
-- electronics testing,
-- mechanism test,
-- app screenshot,
-- final build.
-- <img width="960" height="1280" alt="WhatsApp Image 2026-04-24 at 9 46 02 AM (1)" src="https://github.com/user-attachments/assets/74baa570-5770-483e-be6d-d2f03386e37c" />
+<img width="3024" height="4032" alt="booleanboard" src="https://github.com/user-attachments/assets/a6b3081f-e737-4465-8e07-021e1295a9fc" />
 
 
-
+<img width="4160" height="3120" alt="setup" src="https://github.com/user-attachments/assets/af13b5c5-8a0f-490b-a005-3dbf54faf0db" />
 
 
 # 17. Final Outcome
@@ -593,14 +542,22 @@ Suggested images:
 Describe the final version of your project.
 
 **Response:**  
-
+The final project is a working Smart Traffic Light Controller implemented on an FPGA Boolean Board using Vivado Design Suite. It successfully controls onboard normal LEDs in a timed sequence to simulate traffic light operation using digital logic and Finite State Machine design.
 
 ## 17.2 What Works Well
 
+Correct traffic light sequence execution
+Stable FPGA operation
+Reliable reset functionality
+Accurate timing control
+Successful hardware implementation on Boolean Board
 
 
 ## 17.3 What Still Needs Improvement
 
+Add external traffic LEDs for better visualization
+Include vehicle density sensors
+Improve real-world smart traffic adaptability
 
 ## 17.4 What Changed From the Original Plan
 
@@ -608,7 +565,7 @@ How did the project change from the initial idea?
 
 **Response:**  
 
-
+Initially, the project idea included separate Red, Yellow, and Green LEDs for realistic traffic signal representation. During implementation, we switched to using the normal onboard LEDs available on the Boolean Board, which simplified wiring and made implementation easier. The core traffic logic remained unchanged, but hardware setup became simpler and more compact.
 ---
 
 # 18. Reflection
@@ -621,7 +578,7 @@ How well did you manage time, tasks, and responsibilities?
 
 **Response:**  
 
-
+Our team worked well in dividing tasks between coding, hardware setup, testing, and documentation. Good communication helped solve technical issues quickly. Debugging FPGA pin mapping and timing delays took extra time, but overall tasks were completed on schedule.
 ## 18.2 Technical Reflection
 
 What did you learn about:
@@ -633,7 +590,7 @@ What did you learn about:
 - integration?
 
 **Response:**  
-
+We learned practical implementation of digital logic design, Verilog coding, FPGA programming, simulation in Vivado, circuit connections, and debugging hardware-software integration.
 
 ## 18.3 Design Reflection
 
@@ -648,6 +605,7 @@ What did you learn about:
 
 **Response:**  
 
+We learned that simple design can still demonstrate strong concepts clearly. Careful planning, proper timing control, and repeated testing improved the final project significantly.
 
 ## 18.4 If You Had One More hour
 
@@ -655,7 +613,7 @@ What would you improve next?
 
 **Response:**  
 
-` `
+`We would add sensor-based adaptive traffic control to make the system more interactive and closer to a real smart city traffic signal system. `
 
 ---
 
