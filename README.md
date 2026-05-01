@@ -304,7 +304,7 @@ Task division: coding, circuit setup, testing, and documentation are divided equ
 | Concept              | `[Team]`  | `[Team]`     |
 | Electronics          | `[Shubham]`           | `[Soham]`          |
 | Coding               | `[Soham]`           | `[Gauransh]`          |
-| Mechanical build     | `[Gauransh]`           | `[Shraddha]`          |
+| Mechanical build     | `[Gauransh]`           | `[Shubham]`          |
 | Testing              | `[Shubham]`           | `[Shraddha]`          |
 | Documentation        | `[Shraddha]`           | `[-]`          |
 
@@ -405,8 +405,7 @@ The biggest uncertainty is how efficiently the system can be expanded in the fut
 
 | Tester       | What They Did                 | What Confused Them            | What They Enjoyed               | What You Will Change           |
 | ------------ | ----------------------------- | ----------------------------- | ------------------------------- | ------------------------------ |
-| Team Members | Observed LED traffic sequence | Timing was too fast initially | Liked real-time hardware output | Increase visible delay         |
-| Faculty Demo | Tested reset and output cycle | None                          | Clear traffic simulation        | Add optional countdown display |
+| Team Members | Observed LED traffic sequence | Timer was not working properly | Liked real-time hardware output | Increase visible delay         |
 
 ---
 
