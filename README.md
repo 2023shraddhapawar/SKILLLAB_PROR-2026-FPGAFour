@@ -22,9 +22,9 @@
 | Name                  | Primary Role                    | Secondary Role   | Strengths Brought to the Project |
 | --------------        | ------------------------------- | --------------   | -------------------------------- |
 | `Shraddha Pawar` | `Documentation` | `Implementation of FPGA`  | ` Documentation `|
-| `Shubham Surve` | `Electronics` | `Coding`  | ` Hardware Implementation `|
-| `Soham Baing` | ` Coding ` | `Implenetation of FPGA`  | `Coding`|
-| `Gauransh Dubey` | `Coding` | `Hardware`  | `Coding`|
+| `Shubham Surve` | `Coding` | `Vivado synthesis`  | ` Vivado synthesis `|
+| `Soham Baing` | ` Coding ` | `Vivado synthesis`  | `Coding`|
+| `Gauransh Dubey` | `Implementation of FPGA` | `Hardware`  | `Hardware`|
 
 ## 1.3 FPGAFour
 
@@ -57,10 +57,6 @@ This project creates a practical embedded systems experience by combining hardwa
 | Technology Concept | Digital Logic Design                 | Inspired the finite state machine and sequential logic approach used in traffic light sequencing.    |
 
 ## 2.2 Original Twist
-
-What makes your project original?
-
-**Response:**  
 
 Unlike traditional timer-based traffic light systems, our project uses an FPGA-based programmable controller designed in Vivado Design Suite on a Boolean board, which offers high-speed parallel processing, reliability, and real-time control. The system is modular and can be expanded with vehicle density sensors, pedestrian crossing buttons, emergency vehicle priority, and adaptive signal timing. This makes it closer to a smart city traffic solution rather than a basic digital electronics project.---
 
