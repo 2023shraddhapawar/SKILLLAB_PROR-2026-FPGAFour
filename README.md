@@ -14,24 +14,22 @@
 
 ## 1.1 FPGAFour
 
-`Project^2`
+
+
 
 ## 1.2 Team Members
 
 | Name                  | Primary Role                    | Secondary Role   | Strengths Brought to the Project |
 | --------------        | ------------------------------- | --------------   | -------------------------------- |
-| `Shraddha Pawar` | `[Documentation ]` | `Implementation of FPGA`  | `Documentation, Gift of Gab `|
-| `Shubham Surve` | `[Electronics  ]` | `Coding`  | `Documentation, Gift of Gab `|
-| `Soham Baing` | ` Coding ]` | `Implenetation of FPGA`  | `Documentation, Gift of Gab `|
-| `Gauransh Dubey` | `[ Coding ]` | `Hardware`  | `Documentation, Gift of Gab `|
+| `Shraddha Pawar` | `Documentation` | `Implementation of FPGA`  | ` Documentation `|
+| `Shubham Surve` | `Electronics` | `Coding`  | ` Hardware Implementation `|
+| `Soham Baing` | ` Coding ` | `Implenetation of FPGA`  | `Coding`|
+| `Gauransh Dubey` | `Coding` | `Hardware`  | `Coding`|
 
 ## 1.3 FPGAFour
 
-`"Project Project"`
+<img width="1254" height="1254" alt="poster" src="https://github.com/user-attachments/assets/d4d71825-2fed-49b7-a4b6-8673aa20c623" />
 
-`(because Project-or)`
-
-<img width="1600" height="1131" alt="image" src="https://github.com/user-attachments/assets/c64bfbd4-b3b7-43d9-83ad-c203a5aa11bc" />
 
 ## 1.4 One-Line Pitch
 
@@ -39,7 +37,7 @@
 
 ## 1.5 Expanded Project Idea
 
-**Response:**  
+
 `The Smart Traffic Light Control System is a hardware-based traffic management project designed using Vivado software and implemented on an FPGA Boolean board. The system controls traffic lights at an intersection by managing red, yellow, and green signals in a predefined sequence using digital logic circuits. It can be programmed to adjust signal timing, improving traffic flow and reducing waiting time.
 
 This project creates a practical embedded systems experience by combining hardware programming, digital circuit design, and real-time control systems. It demonstrates how FPGA technology can be used in smart city applications for reliable and fast signal processing. The project involves technologies such as Verilog/VHDL coding, FPGA implementation, Vivado Design Suite, Boolean board interfacing, and sequential logic design.`
@@ -50,7 +48,6 @@ This project creates a practical embedded systems experience by combining hardwa
 
 ## 2.1 References
 
-List what inspired the project.
 
 | Source Type        | Title / Link                         | What Inspired You                                                                                    |
 | ------------------ | ------------------------------------ | ---------------------------------------------------------------------------------------------------- |
@@ -70,19 +67,13 @@ Unlike traditional timer-based traffic light systems, our project uses an FPGA-b
 # 3. Project Intent
 
 ## 3.1 User Journey 
-
-Describe exactly how a user will use the project.Make it a story
-**Response:**  
+  
 Imagine a busy road intersection during peak hours. Normally, vehicles wait unnecessarily because traffic lights follow fixed timing regardless of road congestion. With our Smart Traffic Light Control System, the FPGA board continuously runs programmed traffic sequences with precise timing and fast switching control.
 
 When the system starts, lights begin in a safe default state—Red ON for one road, Green ON for the other. After the programmed interval, signals change smoothly through Yellow to Red/Green transitions. If future sensors are added, the FPGA can quickly adjust timing based on traffic density.
 
 For the user (operator/demo viewer), the experience is simple: power ON the Boolean board, observe the synchronized LED traffic signals, and monitor how digital logic controls real-world traffic behavior efficiently, accurately, and safely.
-                                                  |
-
-
-
----
+                                                  
 
 # 4. Definition of Success
 
@@ -92,11 +83,9 @@ The project is usable when the FPGA successfully controls Red, Yellow, and Green
 
 ## 4.2 Minimum Usable Version
 
-What is the smallest version of this project that still delivers the core experience?
-
-**Response:**  
-
 A basic 2-road traffic signal controller where one road gets Green while the other remains Red, followed by Yellow transition, then the sequence switches.
+
+## 4.3 Strech Features
 
 What features are nice to have but not essential?
 
@@ -139,18 +128,8 @@ IoT monitoring dashboard
 
 ## 5.2 High-Level System Description
 
-Explain how the system works in simple terms.
-
-Include:
-
-- input,
-- processing,
-- output,
-- physical structure,
-- app interaction if any.
-
-**Response:**  
 The system accepts timing/input parameters, processes them using FPGA logic (Finite State Machine), and outputs control signals to LEDs representing traffic lights. The Boolean board acts as the hardware controller, while Vivado is used for simulation, synthesis, and implementation.
+
 ## 5.3 Input / Output Map
 
 | System Part             | Type       | What It Does               |
@@ -167,31 +146,17 @@ The system accepts timing/input parameters, processes them using FPGA logic (Fin
 
 ## 6.1 Concept Architecture/sketch/schematic
 
-Add an early sketch of the full idea.
 
-**Insert image below:**  
-`
-`<img width="1536" height="1024" alt="rough" src="https://github.com/user-attachments/assets/42af5c90-457c-430f-83bc-d7ecf40aa5d6" />
+<img width="1536" height="1024" alt="rough" src="https://github.com/user-attachments/assets/42af5c90-457c-430f-83bc-d7ecf40aa5d6" />
 
 
 
 ## 6.2 Labeled Build Sketch/architecture/flow diagram/algorithm
 
-Add a sketch with labels showing:
-
-- structure,
-- electronics placement,
-- user touch points,
-- moving parts,
-- output elements.
-
-**Insert image below:**  
 
 <img width="1536" height="1024" alt="cktdiagg" src="https://github.com/user-attachments/assets/d2991fa9-74a2-4edf-b163-a40b2870daae" />
 
 
-
-<img width="4160" height="3120" alt="setup" src="https://github.com/user-attachments/assets/52813a59-efff-4001-96ab-c54073be4517" />
 
 ## 6.3 Approximate Dimensions
 
@@ -218,9 +183,6 @@ Add a sketch with labels showing:
 
 ## 7.2 Wiring Plan
 
-Describe the main electrical connections.
-
-**Response:**  
 `The FPGA Boolean board GPIO pins are connected to LEDs. Push buttons are connected to FPGA input pins for reset and optional manual override. A common ground is maintained throughout the circuit for stable operation. The clock signal is generated internally on FPGA, and all traffic light transitions are controlled through programmed state logic.`
 
 ## 7.3 Circuit Diagram/architecture diagram
@@ -229,7 +191,8 @@ Insert a hand-drawn or software-made circuit diagram.
 
 **Insert image below:**  
 
-<img width="1536" height="1024" alt="circuitdiag" src="https://github.com/user-attachments/assets/06d6ccf0-db16-42cb-a00c-c549c28ab439" />
+<img width="1536" height="1024" alt="circuitdiagram" src="https://github.com/user-attachments/assets/d93d075e-2274-404c-847d-1d8f8c463694" />
+
 
 # 7.4. Power Plan
 
@@ -243,7 +206,7 @@ Insert a hand-drawn or software-made circuit diagram.
 
 ---
 
-# 8. Software Planning/
+# 8. Software Planning
 
 ## 8.1 Software Tools
 
@@ -256,20 +219,7 @@ Insert a hand-drawn or software-made circuit diagram.
 
 
 ## 8.2 Software Logic/Algorithm
-
-Describe what the code must do.
-
-Include:
-
-- startup behavior,
-- input handling,
-- sensor reading,
-- decision logic,
-- output behavior,
-- communication logic,
-- reset behavior.
-
-**Response:**  
+ 
 `The software logic for the Smart Traffic Light Control System is designed using Verilog HDL in Vivado Design Suite and implemented on an FPGA Boolean board. The system uses a Finite State Machine (FSM) to control the sequence of Red, Yellow, and Green lights for two intersecting roads.`
 
 - **Startup behavior:**  
@@ -288,21 +238,6 @@ The system continuously monitors the clock signal and reset button. Optional inp
   Pressing reset clears the timer and returns the system to its default starting state for a fresh traffic cycle.
 
 ## 8.3 Code Flowchart
-
-Insert a flowchart showing your code logic.
-
-Suggested sequence:
-
-- start,
-- initialize,
-- wait for input,
-- read input,
-- decision,
-- trigger output,
-- repeat or reset,
-- error handling.
-
-**Insert image below:**  
 
 <img width="1149" height="1369" alt="flowchart" src="https://github.com/user-attachments/assets/72d536fe-a237-4c80-b7aa-9b73f161226f" />
 
@@ -323,9 +258,6 @@ Suggested sequence:
 
 ## 9.2 Material Justification
 
-Explain why you selected your main materials and components.
-
-**Response:**  
 `DC motors (BO motors) were chosen instead of servos or steppers because the system requires continuous rotation for movement rather than precise angular control (Previously, we were considering using steppers as we were planning on tracking movement on the ESP using its relative position from an origin, but since we're using a camera now, this is not required). A motor driver (L298N) was used to allow bidirectional control and speed variation using PWM.`
 
 
@@ -350,27 +282,12 @@ Explain why you selected your main materials and components.
 
 ## 9.5 Budget Reflection
 
-If your cost is too high, what can be simplified, removed, substituted, or shared?
-
-**Response:**  
-
 The project cost is low because the FPGA board and most components are available in the lab. Additional expenses are limited to LEDs and display materials.
 
 # 10. Planning the Work
 
 ## 10.1 Team Working Agreement
 
-Write how your team will work together.
-
-Include:
-
-- how tasks are divided,
-- how decisions are made,
-- how progress will be checked,
-- what happens if a task is delayed,
-- how documentation will be maintained.
-
-**Response:**  
 
 Task division: coding, circuit setup, testing, and documentation are divided equally among team members.
 
@@ -379,10 +296,10 @@ Task division: coding, circuit setup, testing, and documentation are divided equ
 | Task ID | Task                                                   | Owner | Estimated Hours | Deadline   | Dependency | Status      |
 | ------- | ------------------------------------------------------ | ----- | --------------: | ---------- | ---------- | ----------- |
 | T1      | Finalize project concept and design                    | Team  |               2 | 30st April  | None       | Done        |
-| T2      | Create circuit setup on Boolean Board                  | Team  |               3 | 30th April  | T1         | Done        |
-| T3      | Write and simulate Verilog code in Vivado Design Suite | Team  |               5 | 30th April | T2         | Done        |
-| T4      | Implement on FPGA and test LEDs                        |  |               3 | 30th April | T3         | Done        |
-| T5      | Final testing and documentation                        | Team  |               4 | 1th May | T4         | Done |
+| T2      | Create circuit setup on Boolean Board                  | Shubham, Gauransh  |               3 | 30th April  | T1         | Done        |
+| T3      | Write and simulate Verilog code in Vivado Design Suite | Shubham, Soham, Gauransh  |               4 | 30th April | T2         | Done        
+| T4      | Implement on FPGA and test LEDs                        | Shraddha, Soham |               3 | 30th April | T3         | Done        |
+| T5      | Final testing and documentation                        | Shraddha  |               6 | 1th May | T4         | Done |
 
 ## 10.3 Responsibility Split
 
@@ -464,10 +381,6 @@ Expected outcomes:
 
 ## 13.2 Biggest Unknown Right Now
 
-What is the single biggest uncertainty in your project at this stage?
-
-**Response:**  
-
 The biggest uncertainty is how efficiently the system can be expanded in the future to include traffic sensors and adaptive signal timing while maintaining simple FPGA logic.
 
 
@@ -505,20 +418,6 @@ The biggest uncertainty is how efficiently the system can be expanded in the fut
 
 ## 15.1 Fabrication Process(if any)
 
-Describe how the project was physically made.
-
-Include:
-
-- cutting,
-- 3D printing,
-- assembly,
-- fastening,
-- wiring,
-- finishing,
-- revisions.
-
-**Response:**  
-
 `The project was built mainly through electronic assembly and FPGA programming rather than mechanical fabrication. The traffic controller logic was designed in Vivado Design Suite using Verilog HDL and simulated before hardware implementation.
 
 The FPGA Boolean Board was connected to LEDs through basic circuit wiring. Normal onboard LEDs were used to represent traffic signals. The output pins were mapped correctly using the constraints file, and testing was done by observing LED switching patterns.
@@ -532,6 +431,7 @@ Several revisions were made in timing values, output mapping, and reset behavior
 <img width="3024" height="4032" alt="booleanboard" src="https://github.com/user-attachments/assets/a6b3081f-e737-4465-8e07-021e1295a9fc" />
 
 
+
 <img width="4160" height="3120" alt="setup" src="https://github.com/user-attachments/assets/af13b5c5-8a0f-490b-a005-3dbf54faf0db" />
 
 
@@ -539,9 +439,6 @@ Several revisions were made in timing values, output mapping, and reset behavior
 
 ## 17.1 Final Description
 
-Describe the final version of your project.
-
-**Response:**  
 The final project is a working Smart Traffic Light Controller implemented on an FPGA Boolean Board using Vivado Design Suite. It successfully controls onboard normal LEDs in a timed sequence to simulate traffic light operation using digital logic and Finite State Machine design.
 
 ## 17.2 What Works Well
@@ -561,10 +458,6 @@ Improve real-world smart traffic adaptability
 
 ## 17.4 What Changed From the Original Plan
 
-How did the project change from the initial idea?
-
-**Response:**  
-
 Initially, the project idea included separate Red, Yellow, and Green LEDs for realistic traffic signal representation. During implementation, we switched to using the normal onboard LEDs available on the Boolean Board, which simplified wiring and made implementation easier. The core traffic logic remained unchanged, but hardware setup became simpler and more compact.
 ---
 
@@ -572,46 +465,17 @@ Initially, the project idea included separate Red, Yellow, and Green LEDs for re
 
 ## 18.1 Team Reflection
 
-What did your team do well?  
-What slowed you down?  
-How well did you manage time, tasks, and responsibilities?
-
-**Response:**  
-
 Our team worked well in dividing tasks between coding, hardware setup, testing, and documentation. Good communication helped solve technical issues quickly. Debugging FPGA pin mapping and timing delays took extra time, but overall tasks were completed on schedule.
+
 ## 18.2 Technical Reflection
 
-What did you learn about:
-
-- electronics,
-- coding,
-- mechanisms,
-- fabrication,
-- integration?
-
-**Response:**  
 We learned practical implementation of digital logic design, Verilog coding, FPGA programming, simulation in Vivado, circuit connections, and debugging hardware-software integration.
 
 ## 18.3 Design Reflection
 
-What did you learn about:
-
-- designing ,
-- delight,
-- clarity,
-- physical interaction,
-- understanding,
-- iteration?
-
-**Response:**  
-
 We learned that simple design can still demonstrate strong concepts clearly. Careful planning, proper timing control, and repeated testing improved the final project significantly.
 
 ## 18.4 If You Had One More hour
-
-What would you improve next?
-
-**Response:**  
 
 `We would add sensor-based adaptive traffic control to make the system more interactive and closer to a real smart city traffic signal system. `
 
@@ -638,11 +502,3 @@ Before submission, confirm that:
 - [x] Playtesting notes are included
 - [x] Build photos are included
 - [x] Final reflection is written
-<img width="1131" height="1600" alt="image" src="" />
-
----
-
-
----
-
-
