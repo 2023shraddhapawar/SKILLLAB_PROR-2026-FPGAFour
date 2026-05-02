@@ -28,7 +28,7 @@
 
 ## 1.3 FPGAFour
 
-<img width="1254" height="1254" alt="poster" src="https://github.com/user-attachments/assets/d4d71825-2fed-49b7-a4b6-8673aa20c623" />
+<img width="1200" height="1000" alt="poster" src="https://github.com/2023shraddhapawar/SKILLLAB_PROR-2026-FPGAFour/blob/main/images/poster.png" />
 
 
 ## 1.4 One-Line Pitch
@@ -143,15 +143,12 @@ The system accepts timing/input parameters, processes them using FPGA logic (Fin
 ## 6.1 Concept Architecture/sketch/schematic
 
 
-<img width="1536" height="1024" alt="rough" src="https://github.com/user-attachments/assets/42af5c90-457c-430f-83bc-d7ecf40aa5d6" />
-
+<img width="1536" height="1024" alt="rough" src="https://github.com/2023shraddhapawar/SKILLLAB_PROR-2026-FPGAFour/blob/main/images/roughsketch.png" />
 
 
 ## 6.2 Labeled Build Sketch/architecture/flow diagram/algorithm
 
-
-<img width="1536" height="1024" alt="cktdiagg" src="https://github.com/user-attachments/assets/d2991fa9-74a2-4edf-b163-a40b2870daae" />
-
+<img width="1200" height="1000" alt="architecture" src="https://github.com/2023shraddhapawar/SKILLLAB_PROR-2026-FPGAFour/blob/main/images/architecture.jpeg" />
 
 
 ## 6.3 Approximate Dimensions
@@ -187,8 +184,7 @@ Insert a hand-drawn or software-made circuit diagram.
 
 **Insert image below:**  
 
-<img width="1536" height="1024" alt="circuitdiagram" src="https://github.com/user-attachments/assets/d93d075e-2274-404c-847d-1d8f8c463694" />
-
+<img width="1200" height="1000" alt="rough" src="https://github.com/2023shraddhapawar/SKILLLAB_PROR-2026-FPGAFour/blob/main/images/circuitdiag.jpeg" />
 
 # 7.4. Power Plan
 
@@ -235,7 +231,7 @@ The system continuously monitors the clock signal and reset button. Optional inp
 
 ## 8.3 Code Flowchart
 
-<img width="1149" height="1369" alt="flowchart" src="https://github.com/user-attachments/assets/72d536fe-a237-4c80-b7aa-9b73f161226f" />
+<img width="1149" height="1369" alt="flowchart" src="https://github.com/2023shraddhapawar/SKILLLAB_PROR-2026-FPGAFour/blob/main/images/flowchart.jpeg" />
 
 
 # 9. Bill of Materials
@@ -423,11 +419,11 @@ Several revisions were made in timing values, output mapping, and reset behavior
 ## 16 Build Photos
 
 
-<img width="3024" height="4032" alt="booleanboard" src="https://github.com/user-attachments/assets/a6b3081f-e737-4465-8e07-021e1295a9fc" />
+<img width="1200" height="1000" alt="boolean" src="https://github.com/2023shraddhapawar/SKILLLAB_PROR-2026-FPGAFour/blob/main/images/boolean.jpeg" />
 
 
 
-<img width="4160" height="3120" alt="setup" src="https://github.com/user-attachments/assets/af13b5c5-8a0f-490b-a005-3dbf54faf0db" />
+<img width="4160" height="3120" alt="setup" src="https://github.com/2023shraddhapawar/SKILLLAB_PROR-2026-FPGAFour/blob/main/images/setup.jpeg" />
 
 
 # 17. Final Outcome
